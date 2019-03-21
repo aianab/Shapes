@@ -5,10 +5,14 @@ import teaching.*;
 
 public abstract class Shape implements Drawable {
 	protected Object representation;
-	private WhiteBoard whiteBoard;
+	private static WhiteBoard whiteBoard = new WhiteBoard();
 	private Color color;
 	private Boolean solid;
 
+	public Shape() {
+		
+	}
+	
 	public WhiteBoard getWhiteBoard() {
 		return whiteBoard;
 	}
