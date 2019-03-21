@@ -1,7 +1,7 @@
 package shapes;
 import java.awt.Color;
 
-import teaching.*;
+import teaching.WhiteBoard;
 
 public abstract class Shape implements Drawable {
 	protected Object representation;
