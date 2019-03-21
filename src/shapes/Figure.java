@@ -22,7 +22,7 @@ public class Figure implements Drawable{
 		return null;
 	}
 	
-	private Figure snowMan() {
+	public Figure snowMan() {
 		return null;
 	}
 
