@@ -37,9 +37,15 @@ public class Figure implements Drawable{
 	}
 	
 	public Figure snowMan() {
-		//Circle bigCircle = new Circle();
+		Circle bigCircle = new Circle(100, new Point(400, 100));
+		bigCircle.draw();
 		
-		return null;
+		Circle middleCircle = new Circle(70, new Point(400, 270));
+		middleCircle.draw();
+		
+		Circle smallCircle = new Circle(45, new Point(400, 385));
+		smallCircle.draw();
+		return this;
 	}
 	
 	private void removeShapes() {
