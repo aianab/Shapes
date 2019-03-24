@@ -13,6 +13,7 @@ public class Polygon extends Shape {
 
 	@Override
 	public void draw() {
+		getWhiteBoard().removeShape(this);
 		double[] x = new double[points.size()];
 		double[] y = new double[points.size()];
 		for (int i=0; i<x.length; i++) {
@@ -24,7 +25,6 @@ public class Polygon extends Shape {
 
 	@Override
 	public Drawable move(int x, int y) {
-		getWhiteBoard().removeShape(this);
 		for(int i = 0; i < points.size(); i++) {
 			Point p = points.get(i);
 			points.set(i, new Point(p.getX() + x, p.getY() + y));

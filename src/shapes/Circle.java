@@ -19,12 +19,12 @@ public class Circle extends Shape{
 	}
 	
 	public void draw(Color color, boolean solid) {
+		getWhiteBoard().removeShape(this);
 		getWhiteBoard().drawCircle(center.getX(), center.getY(), radius, color, solid);
 	}
 
 	@Override
 	public Drawable move(int x, int y) {
-		getWhiteBoard().removeShape(this);
 		this.center = new Point(x, y);
 		draw();
 		return this;
