@@ -15,7 +15,11 @@ public class Circle extends Shape{
 
 	@Override
 	public void draw() {
-		getWhiteBoard().drawCircle(center.getX(), center.getY(), radius);
+		if(getColor() != null) {
+			draw(getColor(), getSolid());
+		} else {
+			getWhiteBoard().drawCircle(center.getX(), center.getY(), radius);
+		}
 	}
 	
 	public void draw(Color color, boolean solid) {

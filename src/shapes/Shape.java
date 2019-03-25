@@ -32,5 +32,4 @@ public abstract class Shape implements Drawable {
 	public void setSolid(Boolean solid) {
 		this.solid = solid;
 	}
-	
 }
