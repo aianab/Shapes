@@ -25,7 +25,7 @@ public class Circle extends Shape{
 		}
 	}
 	
-	public void draw(Color color, boolean solid) {
+	public void draw(Color color, boolean solid){
 		getWhiteBoard().removeShape(this);
 		getWhiteBoard().drawCircle(center.getX(), center.getY(), radius, color, solid);
 	}

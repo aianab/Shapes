@@ -33,7 +33,8 @@ public class Polygon extends Shape {
 		return this;
 	}
 	
-	public void setPoints(ArrayList<Point> points) {
+	public void setPoints(ArrayList<Point> points) throws PolygonShapeException {
+		if (points.size() < 2) throw new PolygonShapeException("Number of points must be at least two");
 		this.points = points;
 	}
 	
