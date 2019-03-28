@@ -10,7 +10,8 @@ public class Circle extends Shape{
 	private Point center;
 	
 	public Circle(int radius, Point center) throws IllegalArgumentException{
-		if(radius < 0 || center == null) throw new IllegalArgumentException();
+		if(radius < 0) throw new IllegalArgumentException("Radius must be positive");
+		if(center == null) throw new IllegalArgumentException("Center must be declared");
 		this.radius = radius;
 		this.center = center;	
 	}

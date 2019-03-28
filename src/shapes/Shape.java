@@ -21,7 +21,8 @@ public abstract class Shape implements Drawable {
 		return color;
 	}
 
-	public void setColor(Color color) {
+	public void setColor(Color color) throws IllegalArgumentException{
+		if(color == null) throw new IllegalArgumentException("Color must not be null");
 		this.color = color;
 	}
 
