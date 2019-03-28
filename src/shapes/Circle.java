@@ -1,6 +1,7 @@
 package shapes;
 
 import java.awt.Color;
+import java.util.IllegalFormatCodePointException;
 
 import teaching.WhiteBoard;
 
@@ -8,10 +9,12 @@ public class Circle extends Shape{
 	private int radius;
 	private Point center;
 	
-	public Circle(int radius, Point center) {
+	public Circle(int radius, Point center) throws IllegalArgumentException{
+		if(radius < 0 || center == null) throw new IllegalArgumentException();
 		this.radius = radius;
-		this.center = center;
+		this.center = center;	
 	}
+	
 
 	@Override
 	public void draw() {
