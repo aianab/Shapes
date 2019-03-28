@@ -4,7 +4,8 @@ public class Line extends Polygon {
 	private Point p1;
 	private Point p2;
 	
-	public Line(Point p1, Point p2) {
+	public Line(Point p1, Point p2) throws IllegalArgumentException{
+		if(p1 == null || p2 == null) throw new IllegalArgumentException("Starting and ending points in class Line must be declared");
 		this.p1 = p1;
 		this.p2 = p2;
 	}
