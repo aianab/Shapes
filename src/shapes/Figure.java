@@ -14,9 +14,9 @@ public class Figure implements Drawable{
 		polygon = new Polygon();
 	}
 	
-	Figure addShape(Drawable o) {
+	Figure addShape(Drawable o) throws NullPointerException{
+		if(o == null) throw new NullPointerException();
 		shapes.add(o);
-		
 		return this;
 	}
 	
