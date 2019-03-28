@@ -5,7 +5,9 @@ public class Rectangle extends Polygon{
 	private int lengthY;
 	private Point point;
 	
-	public Rectangle(Point point, int lx, int ly) {
+	public Rectangle(Point point, int lx, int ly) throws IllegalArgumentException{
+		if(point == null) throw new IllegalArgumentException("Declare point in class Rectangle");
+		if(lx <=0 || ly <= 0) throw new IllegalArgumentException("Values of x and y must not be negative");
 		this.lengthX = lx;
 		this.lengthY = ly;
 		this.point = point;
